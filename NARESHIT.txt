@@ -1,0 +1,71 @@
+LINQ: Language integrated query					-by NARESHIT (Bangarraju)
+	->Using.System.Linq;	
+	-> designed by Microsoft 3.5 fram work
+	-> it is like (SQL  is query language in Data base) LINQ is query in C# dotnet framework ,it makes easy and efficient code written for application developer 
+ without writing loops and large c# code simply we use LINQ query for getting output.
+
+-Using LINQ we can write queries on a wide variety of data sources like Arrays,Collections,Database,Tables,DataSet's ,XML Data
+
+
+Linq to Objects  :Arrays,Collections,etc.
+Linq to Databases: Data Tables,Relational Database Tables
+		  -Linq to ADO>Net
+		  -Linq to Sql
+		  -Linq to Entites
+
+Linq to XML    :XML Files
+
+linq: having syntaxex in c# format and we write it in c#
+
+Linq to Sql:
+------------
+
+->It's a query language that is introduced in .Net 3.5 framework for working with relational database i.e.Sql Server.
+->Linq to Sql is not only about querying the data but also allows us to perform Insert,Update operations also we call them as CRUD Operations.
+
+CRUD:Create(Insert),Read(Select),Update,Delete		{Stored Procedures=CRUD Operations}
+
+Note:we can also call stored procedures by using Linq to SQL.
+
+->Already there is a language known as SQL using which we can interact with Sql Server with the help of ADO.Net.
+
+
+SQL => SQL Server
+
+1.Runtime Syntax checking of Sql Stmts.	[c# Aplications not run Sql Statements so we writes the sql statements in Double Quotes, in C#. these " coted" sql statmts executed by sql server runtime	or Syntax checking is the duty of SQL SERVER]
+2.Not Type Safe.	[here we are know the column name,type before data inserting data in c#]
+3.No Intellisense Support	[C# Application not shows SQL SERVER syntaxees for developer]
+4.Debugging of Sql Stmts is not possible.	[c#,Sql Server worked so]
+5.Code is a combination of Object Oriented and Relational.	[ex:"Insert Into Student Values("+textBox1.Text+",""+textBox2.Text+"')"; ]
+
+
+LINQ => SQL Server
+
+1.Compile-Time Syntax checking.		[Syntax checking is the duty of c# Application]
+2. Type Safe.
+3. Intellisense Support is Available.	[C# Application shows LINQ syntaxees for developer]
+4.Debugging of Linq Sql is  possible.
+5.Code is a Pure Object Oriented.	[ex:Insert Into Student Values textBox1.Text+,+textBox2.Text+); ]
+
+
+
+IN LINQ :names
+
+SQL				LINQ	
+
+Table			=>	Class
+Columns			=>	Property
+Rows			=>	Instance
+Stored Procedures	=>	Methods
+
+
+
+
+LINQ  query Syntax:
+----   ------------
+
+from <alias> in <coll | arr> [<cluses>] select <alias>		[alias is optional,(clauses=where,groupby,having,orderedby)]
+ex1: var brr=from i in arr select i;
+ex2: var brr=from i in arr  where i>40 select i;
+ex3: var brr=from i in arr where i>40 orderby i select i;
+ex4: var brr=from i in arr where i>40 orderby i descending select i;
